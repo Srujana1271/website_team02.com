@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin Page</title>
+        <link rel="stylesheet" type="text/css" href="styles_topnav2.css">
+        <link rel="stylesheet" type="text/css" href="styles_admin.css">
+        <script>
+            function redirectHome() {
+                window.location.assign("home2.html");
+            }
+        </script>
+    </head>
+    <body>
+        <div class="topnav">
+            <div class="logo">
+                <img src="DER_2.png" alt="Logo" onclick="redirectHome()">
+            </div>
+            <div class="nav-links">
+                <a href="about2.html" class="green-text">About Us</a>
+                <a href="DERData.html" class="green-text">DER Data</a>
+                <a href="contact.html" class="green-text">Contact Us</a>
+                <div class="logo1">
+                    <img src="user1.png" alt="User Logo">
+                    <span class="admin-text">Admin</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h2>Menu</h2>
+            <ul class="nav">
+               <li>
+                    <a href="#">
+                        <span>Dashboard</span>
+                    </a>
+               </li>
+               <li>
+                    <a href="#">
+                       <span>Contact Submissions</span>
+                    </a>
+               </li>
+               <li>
+                    <a href="#">
+                       <span>Registered Users</span>
+                    </a>
+               </li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <h2>Welcome to DER 8.9</h2>
+        </div>
+    </body>
+</html>

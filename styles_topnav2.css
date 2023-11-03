@@ -1,0 +1,45 @@
+.topnav {
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 2px;
+    height: 100px;
+}
+
+.logo img {
+    width: 180px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: rgb(90, 235, 90);
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.logo1 {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.admin-text {
+    margin-left: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.logo1 img {
+    width: 40px;
+}

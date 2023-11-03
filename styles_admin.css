@@ -1,0 +1,57 @@
+/*new*/
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.sidebar {
+    position: fixed;
+    background: grey;
+    width: 350px;
+    height: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: black;
+    background-color: grey;
+    padding: 20px;
+}
+
+.sidebar ul li {
+    margin: 25px 0;
+    font-size: 25px;
+}
+
+.sidebar ul li a {
+    color: black;
+    padding: 0 30px;
+}
+
+.sidebar ul li a:hover {
+    color: white;
+    margin-left: 20px;
+    transition: 0.4s;
+}
+
+.main {
+    margin-left: 400px;
+    padding: 5px;
+}
+
+.main h2 {
+    margin-top: 70px;
+    text-align: center;
+    font-size: 50px;
+    color: green;
+}

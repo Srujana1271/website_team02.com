@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DERData Page</title>
+        <link rel="stylesheet" href="styles_DERData.css">
+        <link rel="stylesheet" href="styles_topnav2.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            function redirectHome() {
+                window.location.assign("home2.html");
+            }
+        </script>
+    </head>
+    <body>
+        <div class="topnav">
+            <div class="logo">
+                <img src="DER_2.png" alt="Logo" onclick="redirectHome()">
+            </div>
+            <div class="nav-links">
+                <a href="about2.html" class="green-text">About Us</a>
+                <a href="DERData.html" class="green-text">DER Data</a>
+                <a href="contact.html" class="green-text">Contact Us</a>
+                <div class="logo1">
+                    <img src="user1.png" alt="User Logo">
+                    <span class="admin-text">Admin</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner">
+            <div class="banner-content">
+                <h1 class="banner-title">DER Data</h1>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart">
+                <h2 class="chart-subtitle">Chart 1: Sales</h2>
+                <canvas id="chart1"></canvas>
+            </div>
+            <div class="chart">
+                <h2 class="chart-subtitle">Chart 2: Energy Efficiency over time</h2>
+                <canvas id="chart2"></canvas>
+            </div>
+            <div class="chart">
+                <h2 class="chart-subtitle">Chart 3: Battery Efficiency</h2>
+                <canvas id="chart3"></canvas>
+            </div>
+            <div class="chart">
+                <h2 class="chart-subtitle">Chart 4: Battery Temperature</h2>
+                <canvas id="chart4"></canvas>
+            </div>
+        </div>
+
+        <script>
+
+            function generateRandomData() {
+                return Array.from({length:5}, () => Math.floor(Math.random() * 100));
+            }
+
+            function generateRandomData1() {
+                return Array.from({length: 5}, () => Math.floor(Math.random() * 1000));
+            }
+
+            function generateRandomData2() {
+                return Array.from({length: 12}, () => Math.floor(Math.random() * 100));
+            }
+
+            var ctx1 = document.getElementById('chart1').getContext('2d');
+            var myChart1 = new Chart(ctx1, {
+                type: 'bar',
+                data: {
+                    labels: ['2019', '2020', '2021', '2022', '2023'],
+                    datasets: [{
+                        label: 'Sales',
+                        data: generateRandomData1(),
+                        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                        borderColor: 'rgba(54,162,235,1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            /*beginAtZero: true,
+                            grace: '5%',
+                            ticks: {
+                                stepSize: 100
+                            }*/
+                            min: 0,
+                            max: 1000,
+                            grace: '5%'
+                        }
+                    }
+                }
+            });
+
+            var ctx2 = document.getElementById('chart2').getContext('2d');
+            var myChart2 = new Chart(ctx2, {
+                type: 'line',
+                data: {
+                    labels: ['January', 'Ferbruary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                    datasets: [{
+                        label: 'Solar',
+                        data: generateRandomData2(),
+                        fill: false,
+                        borderColor: 'rgba(255, 99, 132)',
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Wind',
+                        data: generateRandomData2(),
+                        fill: false,
+                        borderColor: 'rgba(54, 162, 235)',
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Battery',
+                        data: generateRandomData2(),
+                        fill: false,
+                        borderColor: 'rgba(75, 192, 192)',
+                        tension: 0.4
+                    }
+                ]
+                },
+                options: {
+                    scales: {
+                        x: {
+                            display: true,
+                            text: 'Energy Efficiency'
+                        },
+                        y: {
+                            beginAtZero: true,
+                        }
+                    }
+                }
+            });
+
+            var ctx3 = document.getElementById('chart3').getContext('2d');
+            var myChart3 = new Chart(ctx3, {
+                type: 'pie',
+                data: {
+                    labels: ['Fully Charged', 'Charging', 'Discharging', 'Standby', 'Idle'],
+                    datasets: [{
+                        label: 'Battery Efficiency',
+                        data: generateRandomData(),
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.5)',
+                            'rgba(54, 162, 235, 0.5)',
+                            'rgba(255, 206, 86, 0.5)',
+                            'rgba(75, 192, 192, 0.5)',
+                            'rgba(153, 102, 255, 0.5)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    radius: '70%',
+                    layout: {
+                        padding: {
+                            left:0,
+                            right: 0,
+                            top: 0,
+                            bottom: 0
+                        }
+                    }
+                }
+            });
+
+            var ctx4 = document.getElementById('chart4').getContext('2d');
+            var myChart4 = new Chart(ctx4, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Cool', 'Normal', 'Warm', 'Hot', 'Overheat'],
+                    datasets: [{
+                        label: 'Battery Temperature',
+                        data: generateRandomData(),
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.5)',
+                            'rgba(54, 162, 235, 0.5)',
+                            'rgba(255, 206, 86, 0.5)',
+                            'rgba(75, 192, 192, 0.5)',
+                            'rgba(153, 102, 255, 0.5)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    radius: '70%'
+                }
+            });
+
+            setInterval(() => {
+                myChart1.data.datasets[0].data = generateRandomData1();
+                myChart1.update();
+
+                myChart2.data.datasets[0].data = generateRandomData2();
+                myChart2.update();
+
+                myChart2.data.datasets[1].data = generateRandomData2();
+                myChart2.update();
+
+                myChart2.data.datasets[2].data = generateRandomData2();
+                myChart2.update();
+
+                myChart3.data.datasets[0].data = generateRandomData();
+                myChart3.update();
+
+                myChart4.data.datasets[0].data = generateRandomData();
+                myChart4.update();
+            }, 2000);//Update every 2 seconds (2000 milliseconds)
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,46 @@
+.banner {
+    background-image: url('pic12.jpg'); /* Replace with your image filename */
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 1; /* Ensure the banner is fully visible */
+}
+
+.banner-content {
+    padding: 20px;
+    text-align: center;
+    color: rgb(251, 198, 39);
+}
+
+.banner-title {
+    font-size: 3em; /* Adjust title size */
+    margin: 0;
+    text-align: center;
+    color: rgb(251, 198, 39);
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000; /* Title color */
+}
+
+.chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.chart {
+    width: 45%; /* Adjust width as per the layout */
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.chart-subtitle {
+    color: black;
+    font-size: 1.2em;
+    margin-top: 0;
+    text-align: center;
+}

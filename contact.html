@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Contact Us</title>
+        <link rel="stylesheet" type="text/css" href="styles_contact.css">
+        <link rel="stylesheet" type="text/css" href="styles_topnav2.css">
+        <meta name="viewport"  content="width=device-width, initial-scale=1.0">
+        <script>
+            function redirectHome() {
+                window.location.assign("home2.html");
+            }
+        </script>
+    </head>
+    <body>
+        <div class="topnav">
+            <div class="logo">
+                <img src="DER_2.png" alt="Logo" onclick="redirectHome()">
+            </div>
+            <div class="nav-links">
+                <a href="about2.html" class="green-text">About Us</a>
+                <a href="DERData.html" class="green-text">DER Data</a>
+                <a href="contact.html" class="green-text">Contact Us</a>
+                <div class="logo1">
+                    <img src="user1.png" alt="User Logo">
+                    <span class="admin-text">Admin</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="loginbox">
+            <h1>Contact Us</h1>
+            <form>
+                <p>Fullname</p>
+                <input type="text" name="fullname" id="fullname" placeholder="Fullname" required>
+                <p>Email</p>
+                <input type="text" name="email" id="email" placeholder="Email" required>
+                <p>Phone Number</p>
+                <input type="tel" placeholder="Phone Number" required>
+                <p>Upload File:</p>
+                <input type="file" id="file" name="file"><br><br>
+                <input type="submit" name="" value="Submit"><br><br>
+            </form>
+         </div>
+    </body>
+</html>

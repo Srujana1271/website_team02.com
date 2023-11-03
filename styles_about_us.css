@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.topnav {
+    background-color: rgb(28, 28, 28);
+    overflow: hidden;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 2px;
+    height: 100px;
+}
+
+.logo img {
+    width: 180px;
+}
+
+.nav-links a {
+    color: rgb(90, 235, 90);
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+/* Login button styles */
+.login-btn {
+    background-color: rgb(52, 227, 52);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.login-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.banner {
+    background-image: url('pic12.jpg'); /* Replace with your image filename */
+    background-size: cover;
+    background-position: center;
+    height: 200px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 1; /* Ensure the banner is fully visible */
+}
+
+.banner-content {
+    padding: 20px;
+    text-align: center;
+    color: rgb(251, 198, 39);
+}
+
+.banner-title {
+    font-size: 3em; /* Adjust title size */
+    margin: 0;
+    text-align: center;
+    color: rgb(251, 198, 39);
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+.main-content {
+    flex: 1;
+    background: linear-gradient(to bottom, rgb(64, 126, 226), rgb(251, 198, 39));
+    padding: 20px;
+}
+
+.content-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.rounded-rectangle {
+    /*background-color: rgb(234, 229, 217);*/
+    background-color: linear-gradient(to bottom, rgb(64, 126, 226), rgb(251, 198, 39));
+    padding: 20px;
+    border-radius: 15px; /* Adjust border-radius for the rounded corners */
+    padding: 20px;
+    max-width: 1000px;
+    text-align: top;
+    font-size: x-large;
+    height: 250px;
+}
+
+.rounded-rectangle p {
+    font-size: 1.1em;
+    color: #000;
+    text-align: justify;
+}
+
+.main-content table {
+    border-collapse: separate;
+    border-spacing: 10px;
+    width: 60%;
+    margin-top: 20px;
+    margin-left: 300px;
+    align-items: center;
+}
+
+.main-content td {
+    border: none;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(234, 229, 217, 0.5);
+    border-radius: 15px;
+}
+
+.main-content td:hover {
+    background-color: rgba(234, 229, 217, 0.8);
+}
+
+.main-content h1 {
+    text-align: center;
+    color: white;
+    font-size: 3.0em;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000; 
+}
